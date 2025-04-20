@@ -4,7 +4,7 @@
 
 -🧑‍💻 Solutions Consultant - RFID & Mobility Solutions at Technowave Group
 
--🎓 M.Tech in Artificial Intelligence & Machine Learning from BITS PILANI 
+-🎓 M.Tech from Artificial Intelligence & Machine Learning from BITS PILANI 
 
 - 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/ramizpa/)
 
