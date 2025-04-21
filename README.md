@@ -8,6 +8,5 @@
 
 - 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/ramizpa/)
 
-  [LinkedIn](https://linkedin.com/in/yourprofile)
 
 ![Ramiz's GitHub stats](https://github-readme-stats.vercel.app/api?username=ramizpa&show_icons=true&theme=radical)
