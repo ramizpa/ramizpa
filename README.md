@@ -17,7 +17,7 @@
 
 ![Ramiz's GitHub stats](https://github-readme-stats.vercel.app/api?username=ramizpa&show_icons=true&theme=radical)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&show_icons=true&theme=radical)
-![Top Libraries](https://raw.githubusercontent.com/ramizpa/github-stats/main/output/top-libraries.svg)
+
 
 
 
