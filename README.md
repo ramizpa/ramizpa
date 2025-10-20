@@ -1,14 +1,12 @@
-<p align="center"><a href="https://ramizpa.com"><img width="60%" alt="Hello, I'm Ramiz !" src="./assets/rpa-readme-header.png" /></a></p>
+<p align="center"><a href="https://ramizpa.com"><img width="30%" alt="Hello, I'm Ramiz !" src="./assets/rpa-readme-header.png" /></a></p>
 
-<br /> 
+**🧑‍💻 AI/ML Enthusiast**
 
--🧑‍💻 AI/ML Enthusiast
+**🔐 AI/ML for InfoSec/CyberSecurity**
 
--🔐 AI/ML for InfoSec/CyberSecurity
+**🧑‍💻 Solutions Consultant - RFID & Mobility Solutions at Technowave Group**
 
--🧑‍💻 Solutions Consultant - RFID & Mobility Solutions at Technowave Group
-
--🎓 M.Tech In Artificial Intelligence & Machine Learning from BITS PILANI 
+**🎓 M.Tech In Artificial Intelligence & Machine Learning from BITS PILANI**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/ramizpa)
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/ramizpa)
