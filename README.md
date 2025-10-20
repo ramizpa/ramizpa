@@ -1,6 +1,6 @@
-<p align="center"><a href="https://ramizpa.com"><img width="80%" alt="Hello, I'm Ramiz !" src="./assets/gh-readme-header.png" /></a></p>
+<p align="center"><a href="https://ramizpa.com"><img width="60%" alt="Hello, I'm Ramiz !" src="./assets/rpa-readme-header.png" /></a></p>
 
-<br /> 👋
+<br /> 
 
 -🧑‍💻 AI/ML Enthusiast
 
