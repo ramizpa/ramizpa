@@ -1,4 +1,6 @@
-# Hi there, I'm Ramiz 👋
+<p align="center"><a href="https://ramizpa.com"><img width="80%" alt="Hello, I'm Ramiz !" src="./assets/gh-readme-header.png" /></a></p>
+
+<br /> 👋
 
 -🧑‍💻 AI/ML Enthusiast
 
