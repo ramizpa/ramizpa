@@ -16,7 +16,7 @@
 
 
 ![Ramiz's GitHub stats](https://github-readme-stats.vercel.app/api?username=ramizpa&show_icons=true&theme=radical)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&show_icons=true&theme=radical)![Top Libraries](https://quickchart.io/chart?
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&show_icons=true&theme=radical)
 ![Top Libraries](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&hide=html,css,javascript&langs_count=10&theme=radical&layout=compact&custom_title=Library%20Usage)
 
 
