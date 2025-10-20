@@ -17,43 +17,8 @@
 
 ![Ramiz's GitHub stats](https://github-readme-stats.vercel.app/api?username=ramizpa&show_icons=true&theme=radical)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&show_icons=true&theme=radical)![Top Libraries](https://quickchart.io/chart?c={
-  type:'bar',
-  data:{
-    labels:['Pandas','Streamlit','Joblib','scikit-learn','NumPy','Matplotlib','Huggingface','Seaborn','Tensorboard','Keras'],
-    datasets:[{
-      data:[9.09,9.09,5.45,5.45,3.64,3.64,1.82,1.82,1.82,1.82],
-      backgroundColor:['#ff0080','#ff3cac','#ff79c6','#ffb6c1','#6a0dad','#38bdf8','#39ff14','#ffdd00','#ff7f50','#6affc1'],
-      borderRadius:6
-    }]
-  },
-  options:{
-    indexAxis:'y',
-    plugins:{
-      legend:{display:false},
-      title:{
-        display:true,
-        text:'Library Usage Stats',
-        color:'white',
-        font:{size:14, weight:'600'}
-      },
-      datalabels:{
-        display:true,
-        color:'white',
-        align:'right',
-        anchor:'end',
-        formatter:function(value){return value+'%';}
-      }
-    },
-    scales:{
-      x:{ticks:{display:false}, grid:{display:false}},
-      y:{ticks:{display:false}, grid:{display:false}}
-    },
-    layout:{padding:8},
-    responsive:true,
-    maintainAspectRatio:false
-  },
-  plugins:['chartjs-plugin-datalabels']
-}&width=500&height=120&bkg=0f1724)
+![Library Stats](https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Pandas%22%2C%22Streamlit%22%2C%22Joblib%22%2C%22scikit-learn%22%2C%22NumPy%22%2C%22Matplotlib%22%2C%22Huggingface%22%2C%22Seaborn%22%2C%22Tensorboard%22%2C%22Keras%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B9.09%2C9.09%2C5.45%2C5.45%2C3.64%2C3.64%2C1.82%2C1.82%2C1.82%2C1.82%5D%2C%22backgroundColor%22%3A%5B%22%23ff0080%22%2C%22%23ff3cac%22%2C%22%23ff79c6%22%2C%22%23ffb6c1%22%2C%22%236a0dad%22%2C%22%2338bdf8%22%2C%22%2339ff14%22%2C%22%23ffdd00%22%2C%22%23ff7f50%22%2C%22%236affc1%22%5D%2C%22borderRadius%22%3A6%7D%5D%7D%2C%22options%22%3A%7B%22indexAxis%22%3A%22y%22%2C%22plugins%22%3A%7B%22legend%22%3A%7B%22display%22%3Afalse%7D%2C%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Library%20Usage%20Stats%22%2C%22color%22%3A%22white%22%2C%22font%22%3A%7B%22size%22%3A14%2C%22weight%22%3A%22600%22%7D%7D%7D%2C%22scales%22%3A%7Bx%3A%7Bticks%3A%7Bdisplay%3Afalse%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%2Cy%3A%7Bticks%3A%7Bdisplay%3Afalse%7D%2Cgrid%3A%7Bdisplay%3Afalse%7D%7D%7D%2C%22responsive%22%3Atrue%2C%22maintainAspectRatio%22%3Afalse%2C%22layout%22%3A%7B%22padding%22%3A4%7D%7D&width=400&height=120&bkg=0f1724)
+
 
 
 
