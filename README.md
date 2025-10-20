@@ -16,17 +16,45 @@
 
 
 ![Ramiz's GitHub stats](https://github-readme-stats.vercel.app/api?username=ramizpa&show_icons=true&theme=radical)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&show_icons=true&theme=radical)
-<img src="https://img.shields.io/badge/Pandas-9.1%25-ff0080?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Streamlit-9.1%25-ff3cac?style=for-the-badge&logo=streamlit&logoColor=white" />
-<img src="https://img.shields.io/badge/Joblib-5.5%25-ff79c6?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/scikit--learn-5.5%25-ffb6c1?style=for-the-badge&logo=scikit-learn&logoColor=white" />
-<img src="https://img.shields.io/badge/NumPy-3.6%25-6a0dad?style=for-the-badge&logo=numpy&logoColor=white" />
-<img src="https://img.shields.io/badge/Matplotlib-3.6%25-38bdf8?style=for-the-badge&logo=matplotlib&logoColor=white" />
-<img src="https://img.shields.io/badge/Huggingface-1.8%25-39ff14?style=for-the-badge&logo=huggingface&logoColor=white" />
-<img src="https://img.shields.io/badge/Seaborn-1.8%25-ffdd00?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Tensorboard-1.8%25-ff7f50?style=for-the-badge&logo=tensorflow&logoColor=white" />
-<img src="https://img.shields.io/badge/Keras-1.8%25-6affc1?style=for-the-badge&logo=keras&logoColor=white" />
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&show_icons=true&theme=radical)![Top Libraries](https://quickchart.io/chart?c={
+  type:'bar',
+  data:{
+    labels:['Pandas','Streamlit','Joblib','scikit-learn','NumPy','Matplotlib','Huggingface','Seaborn','Tensorboard','Keras'],
+    datasets:[{
+      data:[9.09,9.09,5.45,5.45,3.64,3.64,1.82,1.82,1.82,1.82],
+      backgroundColor:['#ff0080','#ff3cac','#ff79c6','#ffb6c1','#6a0dad','#38bdf8','#39ff14','#ffdd00','#ff7f50','#6affc1'],
+      borderRadius:6
+    }]
+  },
+  options:{
+    indexAxis:'y',
+    plugins:{
+      legend:{display:false},
+      title:{
+        display:true,
+        text:'Library Usage Stats',
+        color:'white',
+        font:{size:14, weight:'600'}
+      },
+      datalabels:{
+        display:true,
+        color:'white',
+        align:'right',
+        anchor:'end',
+        formatter:function(value){return value+'%';}
+      }
+    },
+    scales:{
+      x:{ticks:{display:false}, grid:{display:false}},
+      y:{ticks:{display:false}, grid:{display:false}}
+    },
+    layout:{padding:8},
+    responsive:true,
+    maintainAspectRatio:false
+  },
+  plugins:['chartjs-plugin-datalabels']
+}&width=500&height=120&bkg=0f1724)
+
 
 
 
