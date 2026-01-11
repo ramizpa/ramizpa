@@ -19,8 +19,9 @@
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&layout=compact&theme=radical)
 
-![Metrics](https://raw.githubusercontent.com/ramizpa/ramizpa/main/github-metrics.svg)
 
 
+
+![Test](https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg)
 
 
