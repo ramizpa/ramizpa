@@ -19,10 +19,7 @@
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&layout=compact&theme=radical)
 
+![Stats](https://github-readme-stats.vercel.app/api?username=ramizpa&show_icons=true&theme=radical&format=png)
 
-
-
-![GitHub Stats](./assets/github-stats.svg)
-![Top Languages](./assets/top-langs.svg)
 
 
