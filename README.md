@@ -19,7 +19,8 @@
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ramizpa&layout=compact&theme=radical)
 
-
+![GitHub Stats](https://img.shields.io/badge/GitHub-Stats-blue)
+![Top Languages](https://img.shields.io/badge/Top-Languages-Python%20|%20ML-green)
 
 
 
