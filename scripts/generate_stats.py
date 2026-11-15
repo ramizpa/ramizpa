@@ -2,13 +2,14 @@
 """Generate self-hosted GitHub stats cards (SVG) -- no third-party image server.
 
 Writes:
-  assets/stats.svg      - stars / commits / PRs / issues / repos / followers
-  assets/languages.svg  - top languages by bytes across your own (non-fork) repos
+  assets/stats-light.svg, assets/stats-dark.svg - one card: commits hero number,
+  repo/star/PR tiles and a language donut (top languages by bytes, non-fork repos)
 
 Needs only the Python standard library. Reads GITHUB_TOKEN and GH_USER from the
-environment. Use `--demo` to render with sample data (no network).
+environment. Use --demo to render with sample data (no network).
 """
 import json
+import math
 import os
 import sys
 import urllib.parse
@@ -18,14 +19,15 @@ from html import escape
 API = "https://api.github.com"
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets")
 
-# "radical" colours, same look as the old cards
-BG, BORDER = "#141321", "#e4e2e2"
-TITLE, TEXT, ICON, MUTED = "#fe428e", "#a9fef7", "#f8d847", "#6b7a90"
-LANG_COLORS = [
-    "#fe428e", "#f8d847", "#a9fef7", "#8b5cf6", "#38bdf8",
-    "#fb923c", "#4ade80", "#f472b6",
-]
-EXCLUDE_LANGS = {"Jupyter Notebook"}  # set to {} to include notebooks
+EXCLUDE_LANGS = {"Jupyter Notebook"}  # set to set() to include notebooks
+TOP_N = 6
+
+THEMES = {
+    "light": dict(bg="#ffffff", border="#d0d7de", text="#1f2328", sec="#656d76", tile="#f6f8fa",
+                  series=["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#6250d6"]),
+    "dark": dict(bg="#0d1117", border="#30363d", text="#e6edf3", sec="#8b949e", tile="#161b22",
+                 series=["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#9085e9"]),
+}
 
 
 def gh(path, params=None):
@@ -82,82 +84,80 @@ def fetch(user):
 
 def demo():
     return {
-        "name": "Ramiz", "stars": 12, "repos": 24, "followers": 58,
-        "commits": 934, "prs": 41, "issues": 9,
-        "langs": {"Python": 520000, "Jupyter Notebook": 900000, "JavaScript": 140000,
-                  "Shell": 60000, "HTML": 45000, "C#": 30000},
+        "name": "Ramiz P A", "stars": 2, "repos": 16, "followers": 0,
+        "commits": 113, "prs": 1, "issues": 0,
+        "langs": {"TypeScript": 588, "Python": 183, "Astro": 94, "Batchfile": 39,
+                  "PowerShell": 30, "CSS": 23},
     }
 
 
-def svg_wrap(w, h, title, body, desc):
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="t d">
-  <title id="t">{escape(title)}</title><desc id="d">{escape(desc)}</desc>
-  <style>
-    .title{{font:600 18px 'Segoe UI',Ubuntu,Sans-Serif;fill:{TITLE}}}
-    .lbl{{font:400 14px 'Segoe UI',Ubuntu,Sans-Serif;fill:{TEXT}}}
-    .val{{font:700 14px 'Segoe UI',Ubuntu,Sans-Serif;fill:{TEXT}}}
-    .pct{{font:400 12px 'Segoe UI',Ubuntu,Sans-Serif;fill:{MUTED}}}
-    .ico{{fill:{ICON}}}
-  </style>
-  <rect x="0.5" y="0.5" rx="4.5" width="{w-1}" height="{h-1}" fill="{BG}" stroke="{BORDER}" stroke-opacity="0.35"/>
-  <text x="25" y="35" class="title">{escape(title)}</text>
-{body}
-</svg>
-"""
-
-
-def stats_card(d):
-    rows = [
-        ("Total Stars Earned", d["stars"]),
-        ("Total Commits", d["commits"]),
-        ("Total PRs", d["prs"]),
-        ("Total Issues", d["issues"]),
-        ("Public Repos", d["repos"]),
-        ("Followers", d["followers"]),
-    ]
-    body = []
-    for i, (label, value) in enumerate(rows):
-        y = 70 + i * 25
-        body.append(f'  <circle cx="33" cy="{y-5}" r="4" class="ico"/>')
-        body.append(f'  <text x="48" y="{y}" class="lbl">{escape(label)}:</text>')
-        body.append(f'  <text x="250" y="{y}" class="val">{value:,}</text>')
-    h = 70 + len(rows) * 25 + 5
-    return svg_wrap(350, h, f"{d['name']}'s GitHub Stats", "\n".join(body),
-                    ", ".join(f"{k}: {v}" for k, v in rows))
-
-
-def langs_card(d, top=6):
+def card(d, theme):
+    t = THEMES[theme]
     langs = {k: v for k, v in d["langs"].items() if k not in EXCLUDE_LANGS}
     total = sum(langs.values()) or 1
-    ranked = sorted(langs.items(), key=lambda kv: kv[1], reverse=True)[:top]
-    shown_total = sum(v for _, v in ranked) or 1
-    bar_x, bar_w = 25, 300
-    body, x = [], bar_x
-    body.append(f'  <clipPath id="c"><rect x="{bar_x}" y="55" width="{bar_w}" height="10" rx="5"/></clipPath>')
-    body.append('  <g clip-path="url(#c)">')
+    ranked = sorted(langs.items(), key=lambda kv: kv[1], reverse=True)[:TOP_N]
+    shown = sum(v for _, v in ranked) or 1
+
+    circ = 2 * math.pi * 44
+    segs, start = [], 0.0
     for i, (_, size) in enumerate(ranked):
-        w = bar_w * size / shown_total
-        body.append(f'    <rect x="{x:.2f}" y="55" width="{w:.2f}" height="10" fill="{LANG_COLORS[i % len(LANG_COLORS)]}"/>')
-        x += w
-    body.append("  </g>")
+        share = size / shown
+        seg = max(share * circ - 2.2, 0.6)  # small gap between segments
+        segs.append(
+            f'<circle cx="60" cy="60" r="44" stroke="{t["series"][i]}" '
+            f'stroke-dasharray="{seg:.2f} {circ:.2f}" stroke-dashoffset="{-start * circ:.2f}"/>')
+        start += share
+
+    tiles = [("Repos", d["repos"]), ("Stars", d["stars"]), ("Pull requests", d["prs"])]
+    tile_svg = []
+    for i, (label, value) in enumerate(tiles):
+        x = 265 + i * 128
+        tile_svg.append(
+            f'<rect x="{x}" y="66" width="118" height="54" rx="8" fill="{t["tile"]}"/>'
+            f'<text x="{x+12}" y="86" class="sec sm">{escape(label)}</text>'
+            f'<text x="{x+12}" y="110" class="val">{value:,}</text>')
+
+    legend = []
     for i, (name, size) in enumerate(ranked):
         col, row = i % 2, i // 2
-        cx, cy = 25 + col * 160, 95 + row * 25
-        color = LANG_COLORS[i % len(LANG_COLORS)]
-        body.append(f'  <circle cx="{cx+5}" cy="{cy-4}" r="5" fill="{color}"/>')
-        body.append(f'  <text x="{cx+16}" y="{cy}" class="lbl">{escape(name)}</text>')
-        body.append(f'  <text x="{cx+140}" y="{cy}" text-anchor="end" class="pct">{size/total*100:.1f}%</text>')
-    h = 95 + ((len(ranked) + 1) // 2) * 25 + 10
-    return svg_wrap(350, h, "Top Languages", "\n".join(body),
-                    ", ".join(f"{n} {s/total*100:.1f}%" for n, s in ranked))
+        x, y = 265 + col * 190, 160 + row * 26
+        legend.append(
+            f'<rect x="{x}" y="{y-9}" width="10" height="10" rx="2" fill="{t["series"][i]}"/>'
+            f'<text x="{x+18}" y="{y}" class="body">{escape(name)}</text>'
+            f'<text x="{x+170}" y="{y}" text-anchor="end" class="sec body">{size/total*100:.1f}%</text>')
+
+    desc = (f"{d['commits']} commits, {d['repos']} repos, {d['stars']} stars, {d['prs']} pull requests. "
+            "Top languages: " + ", ".join(f"{n} {s/total*100:.1f}%" for n, s in ranked))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="660" height="252" viewBox="0 0 660 252" role="img" aria-labelledby="t d">
+<title id="t">{escape(d['name'])} on GitHub</title><desc id="d">{escape(desc)}</desc>
+<style>
+text{{font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif;fill:{t['text']}}}
+.sec{{fill:{t['sec']}}} .sm{{font-size:12px}} .body{{font-size:13px}}
+.title{{font-size:16px;font-weight:600}} .val{{font-size:22px;font-weight:600}}
+.hero{{font-family:Georgia,'Times New Roman',serif;font-size:34px}}
+</style>
+<rect x="0.5" y="0.5" width="659" height="251" rx="12" fill="{t['bg']}" stroke="{t['border']}"/>
+<g transform="translate(30 36) scale(1.6667)">
+<g transform="rotate(-90 60 60)" fill="none" stroke-width="14">{''.join(segs)}</g>
+<text x="60" y="62" text-anchor="middle" class="hero" style="font-size:22px">{d['commits']:,}</text>
+<text x="60" y="76" text-anchor="middle" class="sec" style="font-size:8px">commits</text>
+</g>
+<text x="265" y="36" class="title">{escape(d['name'])} on GitHub</text>
+<text x="630" y="36" text-anchor="end" class="sec sm">{d['issues']} issues · {d['followers']} followers</text>
+{''.join(tile_svg)}
+<line x1="265" y1="138" x2="630" y2="138" stroke="{t['border']}"/>
+{''.join(legend)}
+</svg>
+"""
 
 
 def main():
     data = demo() if "--demo" in sys.argv else fetch(os.environ.get("GH_USER", "ramizpa"))
     os.makedirs(OUT, exist_ok=True)
-    for name, svg in (("stats.svg", stats_card(data)), ("languages.svg", langs_card(data))):
+    for theme in THEMES:
+        name = f"stats-{theme}.svg"
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
-            f.write(svg)
+            f.write(card(data, theme))
         print("wrote", name)
 
 
