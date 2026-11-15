@@ -18,6 +18,10 @@
 
 <img src="https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white" alt=".NET"> <img src="https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white" alt="C#"> <img src="https://img.shields.io/badge/ASP.NET%20Core-5C2D91?style=flat&logo=dotnet&logoColor=white" alt="ASP.NET Core"> <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white" alt="SQL Server"> <img src="https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white" alt="Android"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript">
 
+**AI / ML tools**
+
+<img src="https://img.shields.io/badge/ML.NET-512BD4?style=flat&logo=dotnet&logoColor=white" alt="ML.NET"> <img src="https://img.shields.io/badge/RAG-0A7E8C?style=flat" alt="RAG"> <img src="https://img.shields.io/badge/LLMs-412991?style=flat&logo=openai&logoColor=white" alt="LLMs"> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white" alt="TensorFlow"> <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white" alt="scikit-learn"> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white" alt="OpenCV"> <img src="https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white" alt="Pandas"> <img src="https://img.shields.io/badge/NLP-6B7280?style=flat" alt="NLP">
+
 **Featured .NET projects** (source is private, overviews are public)
 
 - [AuditSphere](https://github.com/ramizpa/auditsphere-showcase): barcode asset auditing with an Android app, .NET 8 API and web admin
