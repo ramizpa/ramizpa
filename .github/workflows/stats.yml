@@ -20,6 +20,7 @@ jobs:
       - name: Generate cards
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}  # optional: personal token to include private repos
           GH_USER: ${{ github.repository_owner }}
         run: python3 scripts/generate_stats.py
 
