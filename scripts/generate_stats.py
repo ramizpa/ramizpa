@@ -78,7 +78,7 @@ def fetch(user):
     return {
         "name": profile.get("name") or user,
         "stars": sum(r["stargazers_count"] for r in own),
-        "repos": len(own),
+        "repos": len(repos),  # all owned repos, forks included
         "followers": profile["followers"],
         "commits": count("/search/commits", f"author:{user}"),
         "prs": count("/search/issues", f"author:{user} type:pr"),
