@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="225" viewBox="0 0 350 225" role="img" aria-labelledby="t d">
+  <title id="t">Ramiz P A&#x27;s GitHub Stats</title><desc id="d">Total Stars Earned: 2, Total Commits: 113, Total PRs: 1, Total Issues: 0, Public Repos: 16, Followers: 0</desc>
+  <style>
+    .title{font:600 18px 'Segoe UI',Ubuntu,Sans-Serif;fill:#fe428e}
+    .lbl{font:400 14px 'Segoe UI',Ubuntu,Sans-Serif;fill:#a9fef7}
+    .val{font:700 14px 'Segoe UI',Ubuntu,Sans-Serif;fill:#a9fef7}
+    .pct{font:400 12px 'Segoe UI',Ubuntu,Sans-Serif;fill:#6b7a90}
+    .ico{fill:#f8d847}
+  </style>
+  <rect x="0.5" y="0.5" rx="4.5" width="349" height="224" fill="#141321" stroke="#e4e2e2" stroke-opacity="0.35"/>
+  <text x="25" y="35" class="title">Ramiz P A&#x27;s GitHub Stats</text>
+  <circle cx="33" cy="65" r="4" class="ico"/>
+  <text x="48" y="70" class="lbl">Total Stars Earned:</text>
+  <text x="250" y="70" class="val">2</text>
+  <circle cx="33" cy="90" r="4" class="ico"/>
+  <text x="48" y="95" class="lbl">Total Commits:</text>
+  <text x="250" y="95" class="val">113</text>
+  <circle cx="33" cy="115" r="4" class="ico"/>
+  <text x="48" y="120" class="lbl">Total PRs:</text>
+  <text x="250" y="120" class="val">1</text>
+  <circle cx="33" cy="140" r="4" class="ico"/>
+  <text x="48" y="145" class="lbl">Total Issues:</text>
+  <text x="250" y="145" class="val">0</text>
+  <circle cx="33" cy="165" r="4" class="ico"/>
+  <text x="48" y="170" class="lbl">Public Repos:</text>
+  <text x="250" y="170" class="val">16</text>
+  <circle cx="33" cy="190" r="4" class="ico"/>
+  <text x="48" y="195" class="lbl">Followers:</text>
+  <text x="250" y="195" class="val">0</text>
+</svg>
