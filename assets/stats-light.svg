@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="660" height="252" viewBox="0 0 660 252" role="img" aria-labelledby="t d">
-<title id="t">Ramiz P A on GitHub</title><desc id="d">188 commits, 19 repos, 2 stars, 1 pull requests. Top languages: TypeScript 85.4%, Python 4.2%, HTML 3.7%, CSS 2.1%, Astro 2.0%, Batchfile 0.8%</desc>
+<title id="t">Ramiz P A on GitHub</title><desc id="d">188 commits, 25 repos, 2 stars, 1 pull requests. Top languages: TypeScript 85.4%, Python 4.2%, HTML 3.7%, CSS 2.1%, Astro 2.0%, Batchfile 0.8%</desc>
 <style>
 text{font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif;fill:#1f2328}
 .sec{fill:#656d76} .sm{font-size:12px} .body{font-size:13px}
@@ -14,7 +14,7 @@ text{font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif;fill:#1f232
 </g>
 <text x="265" y="36" class="title">Ramiz P A on GitHub</text>
 <text x="630" y="36" text-anchor="end" class="sec sm">0 issues · 0 followers</text>
-<rect x="265" y="66" width="118" height="54" rx="8" fill="#f6f8fa"/><text x="277" y="86" class="sec sm">Repos</text><text x="277" y="110" class="val">19</text><rect x="393" y="66" width="118" height="54" rx="8" fill="#f6f8fa"/><text x="405" y="86" class="sec sm">Stars</text><text x="405" y="110" class="val">2</text><rect x="521" y="66" width="118" height="54" rx="8" fill="#f6f8fa"/><text x="533" y="86" class="sec sm">Pull requests</text><text x="533" y="110" class="val">1</text>
+<rect x="265" y="66" width="118" height="54" rx="8" fill="#f6f8fa"/><text x="277" y="86" class="sec sm">Repos</text><text x="277" y="110" class="val">25</text><rect x="393" y="66" width="118" height="54" rx="8" fill="#f6f8fa"/><text x="405" y="86" class="sec sm">Stars</text><text x="405" y="110" class="val">2</text><rect x="521" y="66" width="118" height="54" rx="8" fill="#f6f8fa"/><text x="533" y="86" class="sec sm">Pull requests</text><text x="533" y="110" class="val">1</text>
 <line x1="265" y1="138" x2="630" y2="138" stroke="#d0d7de"/>
 <rect x="265" y="151" width="10" height="10" rx="2" fill="#2a78d6"/><text x="283" y="160" class="body">TypeScript</text><text x="435" y="160" text-anchor="end" class="sec body">85.4%</text><rect x="455" y="151" width="10" height="10" rx="2" fill="#eb6834"/><text x="473" y="160" class="body">Python</text><text x="625" y="160" text-anchor="end" class="sec body">4.2%</text><rect x="265" y="177" width="10" height="10" rx="2" fill="#1baf7a"/><text x="283" y="186" class="body">HTML</text><text x="435" y="186" text-anchor="end" class="sec body">3.7%</text><rect x="455" y="177" width="10" height="10" rx="2" fill="#eda100"/><text x="473" y="186" class="body">CSS</text><text x="625" y="186" text-anchor="end" class="sec body">2.1%</text><rect x="265" y="203" width="10" height="10" rx="2" fill="#e87ba4"/><text x="283" y="212" class="body">Astro</text><text x="435" y="212" text-anchor="end" class="sec body">2.0%</text><rect x="455" y="203" width="10" height="10" rx="2" fill="#6250d6"/><text x="473" y="212" class="body">Batchfile</text><text x="625" y="212" text-anchor="end" class="sec body">0.8%</text>
 </svg>
