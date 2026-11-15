@@ -14,10 +14,9 @@
 [![Kaggle](https://img.shields.io/badge/Kaggle-%2300C4B4.svg?logo=kaggle&logoColor=white)](https://kaggle.com/ramizpa)
 [![Portfolio](https://img.shields.io/badge/Portfolio-%23FF5733.svg?logo=google-chrome&logoColor=white)](https://ramizpa.com)
 
-
 <p align="center">
-<img height="200" alt="Ramiz's GitHub stats" src="./assets/stats.svg" />
-&nbsp;&nbsp;
-<img height="200" alt="Top Languages" src="./assets/languages.svg" />
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="./assets/stats-dark.svg">
+<img alt="Ramiz's GitHub stats and top languages" src="./assets/stats-light.svg" width="660">
+</picture>
 </p>
-
