@@ -30,6 +30,9 @@ THEMES = {
 }
 
 
+TOKEN = os.environ.get("STATS_TOKEN") or os.environ.get("GITHUB_TOKEN")
+
+
 def gh(path, params=None):
     url = API + path
     if params:
@@ -37,8 +40,7 @@ def gh(path, params=None):
     req = urllib.request.Request(url, headers={
         "Accept": "application/vnd.github+json",
         "User-Agent": "profile-stats-generator",
-        **({"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}"}
-           if os.environ.get("GITHUB_TOKEN") else {}),
+        **({"Authorization": f"Bearer {TOKEN}"} if TOKEN else {}),
     })
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
@@ -48,7 +50,10 @@ def fetch(user):
     profile = gh(f"/users/{user}")
     repos, page = [], 1
     while True:
-        batch = gh(f"/users/{user}/repos", {"per_page": 100, "page": page, "type": "owner"})
+        if os.environ.get("STATS_TOKEN"):  # personal token: include private repos
+            batch = gh("/user/repos", {"per_page": 100, "page": page, "affiliation": "owner"})
+        else:
+            batch = gh(f"/users/{user}/repos", {"per_page": 100, "page": page, "type": "owner"})
         repos += batch
         if len(batch) < 100:
             break
@@ -73,7 +78,7 @@ def fetch(user):
     return {
         "name": profile.get("name") or user,
         "stars": sum(r["stargazers_count"] for r in own),
-        "repos": profile["public_repos"],
+        "repos": len(own),
         "followers": profile["followers"],
         "commits": count("/search/commits", f"author:{user}"),
         "prs": count("/search/issues", f"author:{user} type:pr"),
