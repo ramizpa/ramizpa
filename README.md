@@ -1,6 +1,6 @@
 <p align="center"><a href="https://ramizpa.com"><img width="30%" alt="Hello, I'm Ramiz !" src="./assets/rpa-readme-header.png" /></a></p>
 
-**🧑‍💻 AI/ML Enthusiast**
+**🧑‍💻 AI/ML Architect & Asp.net/SQL Developer**
 
 **🔐 AI/ML for InfoSec/CyberSecurity**
 
