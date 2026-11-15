@@ -19,3 +19,16 @@
 
 ![Top Languages](https://YOUR-PROJECT.vercel.app/api/top-langs/?username=ramizpa&layout=compact&theme=radical)
 
+<p align="center"><a href="https://ramizpa.com"><img width="30%" alt="Hello, I'm Ramiz !" src="./assets/rpa-readme-header.png" /></a></p>
+
+🧑‍💻 AI/ML Enthusiast
+
+🔐 AI/ML for InfoSec/CyberSecurity
+
+🧑‍💻 Solutions Consultant - RFID & Mobility Solutions at Technowave Group
+
+🎓 M.Tech In Artificial Intelligence & Machine Learning from BITS PILANI
+
+LinkedIn GitHub Twitter Kaggle Portfolio
+
+<p align="center"> <img height="200" alt="Ramiz's GitHub stats" src="./assets/stats.svg" /> &nbsp;&nbsp; <img height="200" alt="Top Languages" src="./assets/languages.svg" /> </p>
