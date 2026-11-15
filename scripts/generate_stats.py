@@ -99,6 +99,8 @@ def demo():
 def card(d, theme):
     t = THEMES[theme]
     langs = {k: v for k, v in d["langs"].items() if k not in EXCLUDE_LANGS}
+    if "C#" in langs:  # GitHub reports .NET code as C#
+        langs["C# / .NET"] = langs.pop("C#")
     total = sum(langs.values()) or 1
     ranked = sorted(langs.items(), key=lambda kv: kv[1], reverse=True)[:TOP_N]
     shown = sum(v for _, v in ranked) or 1
