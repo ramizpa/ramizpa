@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="660" height="252" viewBox="0 0 660 252" role="img" aria-labelledby="t d">
-<title id="t">Ramiz P A on GitHub</title><desc id="d">125 commits, 12 repos, 2 stars, 1 pull requests. Top languages: TypeScript 58.7%, Python 18.4%, Astro 9.4%, Batchfile 3.9%, PowerShell 3.0%, CSS 2.3%</desc>
+<title id="t">Ramiz P A on GitHub</title><desc id="d">127 commits, 12 repos, 2 stars, 1 pull requests. Top languages: TypeScript 58.7%, Python 18.4%, Astro 9.4%, Batchfile 3.9%, PowerShell 3.0%, CSS 2.3%</desc>
 <style>
 text{font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif;fill:#e6edf3}
 .sec{fill:#8b949e} .sm{font-size:12px} .body{font-size:13px}
@@ -9,7 +9,7 @@ text{font-family:'Segoe UI',-apple-system,Helvetica,Arial,sans-serif;fill:#e6edf
 <rect x="0.5" y="0.5" width="659" height="251" rx="12" fill="#0d1117" stroke="#30363d"/>
 <g transform="translate(30 36) scale(1.6667)">
 <g transform="rotate(-90 60 60)" fill="none" stroke-width="14"><circle cx="60" cy="60" r="44" stroke="#3987e5" stroke-dasharray="167.49 276.46" stroke-dashoffset="-0.00"/><circle cx="60" cy="60" r="44" stroke="#d95926" stroke-dasharray="50.86 276.46" stroke-dashoffset="-169.69"/><circle cx="60" cy="60" r="44" stroke="#199e70" stroke-dasharray="25.03 276.46" stroke-dashoffset="-222.74"/><circle cx="60" cy="60" r="44" stroke="#c98500" stroke-dasharray="9.17 276.46" stroke-dashoffset="-249.98"/><circle cx="60" cy="60" r="44" stroke="#d55181" stroke-dasharray="6.35 276.46" stroke-dashoffset="-261.34"/><circle cx="60" cy="60" r="44" stroke="#9085e9" stroke-dasharray="4.36 276.46" stroke-dashoffset="-269.90"/></g>
-<text x="60" y="62" text-anchor="middle" class="hero" style="font-size:22px">125</text>
+<text x="60" y="62" text-anchor="middle" class="hero" style="font-size:22px">127</text>
 <text x="60" y="76" text-anchor="middle" class="sec" style="font-size:8px">commits</text>
 </g>
 <text x="265" y="36" class="title">Ramiz P A on GitHub</text>
