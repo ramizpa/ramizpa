@@ -28,7 +28,7 @@
 - [DataWave IMS](https://github.com/ramizpa/datawave-ims-showcase): full-cycle inventory management on ASP.NET Core 10 and SQL Server
 - [Dataman](https://github.com/ramizpa/dataman-showcase): pre-sales and quotation management with PDF extraction, prospect pipeline and a local AI assistant
 - [DataPilot AI](https://github.com/ramizpa/datapilot-ai-showcase): ask questions in plain language, get safe SQL reports with a local LLM
-- [Taskman](https://github.com/ramizpa/taskman-AI---Showcase): AI office companion for Windows and iPhone with tasks, quotes, reminders and live sync
+- [Taskman AI](https://github.com/ramizpa/taskman-AI---Showcase): AI office companion for Windows and iPhone with tasks, quotes, reminders and live sync
 
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="./assets/stats-dark.svg">
